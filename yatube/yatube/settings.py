@@ -35,7 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'posts.apps.PostsConfig', # Добавлено 23.02.2022
+    'posts.apps.PostsConfig',  # Добавлено 23.02.2022
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'yatube.urls'
 
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates') # Добавлено 25.02.2022
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')  # Добавлено 25.02.2022
 
 TEMPLATES = [
     {
