@@ -5,6 +5,6 @@ app_name = 'posts'
 namespace = 'posts'
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('group/<slug:slug>/', views.group_posts, name='group_list'),
+    path('', views.index, name = 'index'),
+    path('group/<slug:slug>/', views.group_posts, name = 'group_list'),
 ]
