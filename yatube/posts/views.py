@@ -15,6 +15,6 @@ def group_posts(request, slug):
     posts = Post.objects.filter(group=group).order_by('-pub_date')[:10]
     context = {
         'posts': posts,
-        'group': group,
+        'groups': group,
     }
     return render(request, 'posts/group_list.html', context)
