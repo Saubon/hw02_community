@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',  # Добавлено 19.03.2022
     'posts.apps.PostsConfig',  # Добавлено 23.02.2022
     'django.contrib.admin',
     'django.contrib.auth',
