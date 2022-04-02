@@ -4,6 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -91,7 +92,9 @@ USE_L10N = True
 USE_TZ = True
 
 LOGIN_URL = 'users:login'
+
 LOGIN_REDIRECT_URL = 'posts:index'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
