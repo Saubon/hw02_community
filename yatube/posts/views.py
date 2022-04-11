@@ -1,7 +1,10 @@
+from django.contrib.auth import get_user_model
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render
 
 from .models import Group, Post
+
+User = get_user_model()
 
 
 def get_page_context(queryset, request):
@@ -14,8 +17,9 @@ def get_page_context(queryset, request):
         'page_obj': page_obj,
     }
 
+
 def index(request):
-    context = get_page_context(Post.objects.all())
+    context = get_page_context(Post.objects.all(), request)
     return render(request, 'posts/index.html', context)
 
 
@@ -37,3 +41,12 @@ def profile(request, username):
     }
     context.update(get_page_context(author.posts.all(), request))
     return render(request, 'posts/profile.html', context)
+
+
+def post_detail(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    context = {
+        'post': post,
+    }
+    context.update(get_page_context(post_id.posts.all(), request))
+    return render(request, 'posts/post_detail.html', context)

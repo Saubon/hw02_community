@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'posts.apps.PostsConfig',  # Добавлено 23.02.2022
     'users.apps.UsersConfig',  # Добавлено 23.03.2022
     'core.apps.CoreConfig',  # Добавлено 23.03.2022
-    'core.apps.AboutConfig',  # Добавлено 07.04.2022
+    'about.apps.AboutConfig',  # Добавлено 07.04.2022
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
